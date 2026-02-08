@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Construction Piscine Maroc | Pisciniste de Luxe & Rénovation - AFRICPOOLS</title>
+    <meta name="description" content="Leader de la construction de piscines au Maroc. Piscines à débordement, lagon, spas et rénovation à Casablanca, Marrakech et tout le royaume. Devis gratuit." />
+    <meta name="keywords" content="piscine maroc, construction piscine casablanca, pisciniste maroc, rénovation piscine, piscine à débordement, entretien piscine, spa maroc, jacuzzi" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Construction Piscine Maroc | AFRICPOOLS" />
+    <meta property="og:description" content="Transformez votre extérieur avec AFRICPOOLS. Experts en piscines de luxe, rénovation et maintenance au Maroc." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/imagefinal.png" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://africpools.com/" />
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5ea3d6', // Updated to match logo background
+                        secondary: '#4a92c7', // Slightly darker version
+                        accent: '#f0f9ff', // Sky 50
+                        dark: '#0f172a', // Slate 900
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'ken-burns': 'kenBurns 20s ease-out infinite alternate',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            },
+                        },
+                        kenBurns: {
+                            '0%': {
+                                transform: 'scale(1)'
+                            },
+                            '100%': {
+                                transform: 'scale(1.1)'
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        /* Smooth Theme Transition */
+        
+        body,
+        .bg-white,
+        .bg-accent,
+        .bg-gray-50,
+        .bg-dark,
+        .text-gray-900,
+        .text-gray-800,
+        .text-gray-600,
+        .text-gray-500 {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        /* Custom Scrollbar */
+        
+         ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        .dark ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: #5ea3d6;
+            border-radius: 5px;
+        }
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: #4a92c7;
+        }
+        /* Animation Utilities */
+        
+        .reveal-hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+        }
+        
+        .reveal-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .reveal-left-hidden {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+        }
+        
+        .reveal-right-hidden {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+        }
+        /* Responsive adjustments for animations to ensure they look good on mobile/tablet */
+        
+        @media (max-width: 768px) {
+            .reveal-left-hidden {
+                transform: translateX(-20px);
+            }
+            .reveal-right-hidden {
+                transform: translateX(20px);
+            }
+            .reveal-hidden {
+                transform: translateY(20px);
+            }
+        }
+        
+        .reveal-reset {
+            opacity: 1;
+            transform: translate(0);
+        }
+        /* Stagger delays */
+        
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+        
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+        
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+        
+        .delay-400 {
+            transition-delay: 400ms;
+        }
+        
+        .delay-500 {
+            transition-delay: 500ms;
+        }
+        /* Additional Keyframe Animations */
+        
+        .animate-slide-down {
+            animation: slideDown 0.3s ease-out forwards;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-pop-in {
+            animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            /* Start hidden */
+        }
+        
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+    </style>
+    <script type="importmap">
+        { "imports": { "react/": "https://esm.sh/react@^19.2.4/", "react": "https://esm.sh/react@^19.2.4", "react-dom/": "https://esm.sh/react-dom@^19.2.4/", "lucide-react": "https://esm.sh/lucide-react@^0.563.0" } }
+    </script>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
