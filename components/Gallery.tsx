@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Translations } from '../types';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 interface GalleryProps {
   t: Translations['gallery'];
@@ -8,15 +9,24 @@ interface GalleryProps {
 
 const Gallery: React.FC<GalleryProps> = ({ t }) => {
   const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
+  const [showAll, setShowAll] = useState(false);
 
-  // Mapped Unsplash images from the provided links
+  // Mapped images: Original 6 + 6 New additions
   const images = [
-    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/WhatsApp%20Image%202026-02-08%20at%2000.16.261.jpeg", // Deux chaises longues
-    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/WhatsApp%20Image%202026-02-08%20at%2000.16.11.jpeg", // Maison avec piscine
-    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/WhatsApp%20Image%202026-02-08%20at%2000.16.02.jpeg", // Vue aérienne bâtiment
-    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/WhatsApp%20Image%202026-02-08%20at%2000.11.51.jpeg", // Vue aérienne cour arrière
-    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/WhatsApp%20Image%202026-02-08%20at%2000.11.48.jpeg", // Hôtel avec piscine palmiers
-    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/WhatsApp%20Image%202026-02-08%20at%2000.16.215.jpeg"  // Piscine extérieure
+    // Original 6
+    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/1-1.jpeg",
+    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/WhatsApp%20Image%202026-02-08%20at%2000.16.11.jpeg",
+    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/WhatsApp%20Image%202026-02-08%20at%2000.16.02.jpeg",
+    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/WhatsApp%20Image%202026-02-08%20at%2000.11.51.jpeg",
+    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/WhatsApp%20Image%202026-02-08%20at%2000.11.48.jpeg",
+    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/WhatsApp%20Image%202026-02-08%20at%2000.16.215.jpeg",
+    // New 6 (Placeholder luxury pool images from Unsplash to match style)
+    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/WhatsApp%20Image%202026-02-08%20at%2000.16.261.jpeg",
+    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/1-4.jpeg",
+    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/1-5.jpg",
+    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/1-6.jpg",
+    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/1-7.jpg",
+    "https://raw.githubusercontent.com/nhach-design/images/refs/heads/main/1-3.jpeg"
   ];
 
   const altTags = [
@@ -25,8 +35,17 @@ const Gallery: React.FC<GalleryProps> = ({ t }) => {
     "Conception architecturale piscine immeuble Maroc",
     "Réalisation piscine jardin privé Marrakech",
     "Piscine hôtel de luxe palmiers Maroc",
-    "Construction piscine résidentielle haut de gamme"
+    "Construction piscine résidentielle haut de gamme",
+    // Alt tags for new images
+    "Piscine à débordement avec vue sur la nature",
+    "Piscine de luxe éclairée la nuit",
+    "Aménagement extérieur avec piscine moderne",
+    "Piscine lagon avec végétation tropicale",
+    "Spa et espace détente piscine",
+    "Design contemporain piscine villa"
   ];
+
+  const displayedImages = showAll ? images : images.slice(0, 6);
 
   return (
     <section id="gallery" className="py-24 bg-accent/30 dark:bg-slate-800/30 transition-colors duration-300 scroll-mt-20 md:scroll-mt-28">
@@ -37,11 +56,11 @@ const Gallery: React.FC<GalleryProps> = ({ t }) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {images.map((src, idx) => (
+          {displayedImages.map((src, idx) => (
             <div 
-              key={idx} 
-              className={`group relative overflow-hidden rounded-xl aspect-[4/3] shadow-md cursor-pointer reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}
-              style={{ transitionDelay: `${idx * 100}ms` }}
+              key={`${src}-${idx}`} 
+              className={`group relative overflow-hidden rounded-xl aspect-[4/3] shadow-md cursor-pointer animate-fade-in-up`}
+              style={{ animationDelay: `${(idx % 6) * 100}ms` }}
             >
               <img 
                 src={src} 
@@ -59,6 +78,24 @@ const Gallery: React.FC<GalleryProps> = ({ t }) => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Show More / Show Less Button */}
+        <div className={`mt-12 text-center reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="inline-flex items-center gap-2 bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+          >
+            {showAll ? (
+              <>
+                {t.seeLess} <ChevronUp size={20} />
+              </>
+            ) : (
+              <>
+                {t.seeMore} <ChevronDown size={20} />
+              </>
+            )}
+          </button>
         </div>
       </div>
     </section>

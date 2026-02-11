@@ -44,6 +44,8 @@ export interface Translations {
   gallery: {
     title: string;
     subtitle: string;
+    seeMore: string;
+    seeLess: string;
   };
   contact: {
     title: string;

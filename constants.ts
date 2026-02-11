@@ -46,7 +46,9 @@ export const TRANSLATIONS: Record<Language, Translations> = {
     },
     gallery: {
       title: "Galerie de Réalisations",
-      subtitle: "Inspiration : Nos plus belles piscines à Casablanca, Marrakech et Tanger"
+      subtitle: "Inspiration : Nos plus belles piscines à Casablanca, Marrakech et Tanger",
+      seeMore: "Voir Plus de Réalisations",
+      seeLess: "Voir Moins"
     },
     contact: {
       title: "Contactez Votre Pisciniste",
@@ -101,7 +103,9 @@ export const TRANSLATIONS: Record<Language, Translations> = {
     },
     gallery: {
       title: "Our Portfolio",
-      subtitle: "View our recent pool projects in Morocco"
+      subtitle: "View our recent pool projects in Morocco",
+      seeMore: "See More Projects",
+      seeLess: "See Less"
     },
     contact: {
       title: "Contact Us",
@@ -156,7 +160,9 @@ export const TRANSLATIONS: Record<Language, Translations> = {
     },
     gallery: {
       title: "معرض الأعمال",
-      subtitle: "اكتشف أحدث مشاريع المسابح في المغرب"
+      subtitle: "اكتشف أحدث مشاريع المسابح في المغرب",
+      seeMore: "شاهد المزيد",
+      seeLess: "عرض أقل"
     },
     contact: {
       title: "اتصل بنا",
@@ -211,7 +217,9 @@ export const TRANSLATIONS: Record<Language, Translations> = {
     },
     gallery: {
       title: "Unsere Referenzen",
-      subtitle: "Entdecken Sie unsere neuesten Pool-Projekte in Marokko"
+      subtitle: "Entdecken Sie unsere neuesten Pool-Projekte in Marokko",
+      seeMore: "Mehr Projekte sehen",
+      seeLess: "Weniger anzeigen"
     },
     contact: {
       title: "Kontakt",
@@ -266,7 +274,9 @@ export const TRANSLATIONS: Record<Language, Translations> = {
     },
     gallery: {
       title: "Nuestras Realizaciones",
-      subtitle: "Descubra nuestros proyectos de piscinas en Marruecos"
+      subtitle: "Descubra nuestros proyectos de piscinas en Marruecos",
+      seeMore: "Ver Más Proyectos",
+      seeLess: "Ver Menos"
     },
     contact: {
       title: "Contáctenos",

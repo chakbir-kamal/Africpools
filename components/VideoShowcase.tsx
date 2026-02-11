@@ -5,10 +5,11 @@ import { ChevronLeft, ChevronRight, VolumeX } from 'lucide-react';
 
 const VIDEOS = [
   "https://raw.githubusercontent.com/nhach-design/videos/80a35f904154c142c98613d61a050afb7524f0ad/1770562360302.publer.com.mp4",
-  "https://raw.githubusercontent.com/nhach-design/videos/80a35f904154c142c98613d61a050afb7524f0ad/1770562463062.publer.com.mp4",
+  "https://raw.githubusercontent.com/nhach-design/videos/main/v.mp4",
   "https://raw.githubusercontent.com/nhach-design/videos/80a35f904154c142c98613d61a050afb7524f0ad/1770562288335.publer.com.mp4",
   "https://raw.githubusercontent.com/nhach-design/videos/80a35f904154c142c98613d61a050afb7524f0ad/1770562463062.publer.com.mp4",
-  "https://raw.githubusercontent.com/nhach-design/videos/80a35f904154c142c98613d61a050afb7524f0ad/1770562512994.publer.com.mp4"
+  "https://raw.githubusercontent.com/nhach-design/videos/80a35f904154c142c98613d61a050afb7524f0ad/1770562512994.publer.com.mp4",
+  "https://raw.githubusercontent.com/nhach-design/videos/main/2v.mp4"
 ];
 
 interface VideoShowcaseProps {
